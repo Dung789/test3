@@ -1,4 +1,6 @@
-print("Hello, world")
+def print_banner(title=""):
+    subprocess.call("clear")
+    print("""
 ████████╗███████╗███████╗████████╗    ████████╗ ██████╗  ██████╗ ██╗  
 ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝    ╚══██╔══╝██╔═══██╗██╔═══██╗██║  
    ██║   █████╗  ███████╗   ██║          ██║   ██║   ██║██║   ██║██║  
@@ -12,7 +14,14 @@ print("Hello, world")
 ██╗ ██║ ██║ ██║ ██║ ██║
 ╚═╝██╔╝██╔╝██╔╝██╔╝██╔╝
    ╚═╝ ╚═╝ ╚═╝ ╚═╝ ╚═╝
-
+@==|;;;;;;>
+""")
+    total_len = 80
+    if title:
+        padding = total_len - len(title) - 4
+        print("== {} {}\n".format(title, "=" * padding))
+    else:
+        print("{}\n".format("=" * total_len)) 
 
 name = input ("b├б┼Я─Дn t─В┼Юn g─В┼╣:")
 print(f"Hello {name}")
